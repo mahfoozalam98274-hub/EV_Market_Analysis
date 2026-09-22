@@ -1,0 +1,5 @@
+autopilot_level,count,avg_price_inr,avg_range_miles,total_sales,autopilot_level_label
+0,617,5578068.19,265.76,70576282,L0-No Assist
+1,636,6524610.16,258.82,61714199,L1-Assist
+2,628,7463171.81,261.81,99303143,L2-Partial
+3,119,7510508.1,257.58,27713560,L3-Conditional

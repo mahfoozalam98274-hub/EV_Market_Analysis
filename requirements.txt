@@ -1,0 +1,19 @@
+# EV Market Analysis 2026 — Python Dependencies
+# Install with: pip install -r requirements.txt
+# Python >= 3.9 required
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualisation
+plotly>=5.15.0
+
+# Dashboard
+streamlit>=1.30.0
+
+# Regression trendlines in Plotly scatter
+statsmodels>=0.14.0
+
+# Optional: faster CSV I/O (drop-in replacement)
+# pyarrow>=12.0.0
