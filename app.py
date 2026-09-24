@@ -619,10 +619,11 @@ with tabs[5]:
         .sort_values("avg_rating", ascending=False).head(10).reset_index()
     )
     top_rated.columns = ["Brand", "Model", "Avg Rating", "Avg Safety", "Avg Price (Rs L)", "Total Sales"]
-    st.dataframe(
-        top_rated.style.background_gradient(subset=["Avg Rating", "Avg Safety"], cmap="Greens"),
-        use_container_width=True, height=380,
-    )
+    try:
+        styled = top_rated.style.background_gradient(subset=["Avg Rating", "Avg Safety"], cmap="Greens")
+        st.dataframe(styled, use_container_width=True, height=380)
+    except Exception:
+        st.dataframe(top_rated, use_container_width=True, height=380)
 
 
 # ===========================================================================
@@ -661,8 +662,11 @@ with tabs[6]:
         "avg_battery": "Avg Battery (kWh)", "total_sales": "Total Sales",
         "avg_rating": "Avg Rating", "count": "Records",
     })
-    st.dataframe(disp.style.background_gradient(subset=["Total Sales"], cmap="Blues"),
-                 use_container_width=True, height=280)
+    try:
+        styled_disp = disp.style.background_gradient(subset=["Total Sales"], cmap="Blues")
+        st.dataframe(styled_disp, use_container_width=True, height=280)
+    except Exception:
+        st.dataframe(disp, use_container_width=True, height=280)
 
     c3, c4 = st.columns(2)
     scs = df.groupby(["country_of_origin", "market_segment"])["annual_sales_units"].sum().reset_index()
