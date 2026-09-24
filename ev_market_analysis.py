@@ -9,7 +9,7 @@ Comprehensive data analytics pipeline for the EV Market 2026 dataset.
 - Performs EDA
 - Exports dashboard-ready CSVs for IBM BI
 
-Author : EV Market Analytics Team
+Author : Mahfooz Alam
 Python : 3.9+
 """
 
